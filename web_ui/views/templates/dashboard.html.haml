@@ -1,0 +1,29 @@
+.middle-wrap.row
+  .fields
+    .field
+      %label
+        Width
+        %input
+    .field
+      %label
+        Length
+        %input
+    .field
+      %label
+        Height
+        %input
+    .field
+      %label
+        Weight
+        %input#weight{ng: {model: 'parcel.weight', change: 'recalculate()'}}
+  .line
+  .transport_systems
+    .single_system{ng: {repeat: "transport_system in transport_systems | orderBy:order"}}
+      %input{type: :radio, name: :system, id: '{{transport_system.key}}', ng: {click: 'changeSystem(transport_system)'}}
+      %label{for: '{{transport_system.key}}'}
+        {{transport_system.name}}
+  .line
+  .total
+    Total: ${{total}}
+    .error_msg{ng: {if: 'error_message'}}
+      {{error_message}}

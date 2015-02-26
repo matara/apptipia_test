@@ -1,0 +1,51 @@
+!!! 5
+%html{ng: {app: 'WebUi'}}
+  %head
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    %meta{content: 'text/html; charset=utf-8', http: {equiv: 'Content-Type'}}
+    %meta{name: :viewport, content: 'width=device-width, initial-scale=1, user-scalable=no'}
+    %title Web UI
+    = stylesheet_tag 'content.css'
+  %body
+    %div
+      %div.inner-wrap
+        %nav.header-container.tab-bar
+          %section.left.application-title.tab-bar-section
+            Parcel Delivery calculator
+        %main.content.main-section
+          = yield
+    = javascript_tag 'content.js'
+
+    :javascript
+      window.WebUiSettings = {
+        move_fast_fee: 15,
+        transport_systems: [
+          {
+              name: 'EMS',
+              key: 'ems',
+              fee: 10,
+              price_per_kg: 1.5,
+              processable_weight: 30,
+              order: 1
+          },
+          {
+            name: 'Priority',
+            key: 'priority',
+            fee: 15,
+            price_per_kg: 5,
+            processable_weight: 22,
+            order: 2
+          },
+          {
+            name: 'Courier',
+            key: 'courier',
+            fee: 20,
+            price_per_kg: 15,
+            processable_weight: 10,
+            order: 3
+          }
+        ]
+      };

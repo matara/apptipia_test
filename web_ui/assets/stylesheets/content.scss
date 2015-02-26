@@ -1,0 +1,61 @@
+@import "content/foundation";
+
+html {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100%;
+  background-color: white;
+}
+
+.inner-wrap {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.header-container {
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  border-bottom: 1px solid grey;
+}
+
+.fields {
+  height: 30px;
+  vertical-align: middle;
+  margin-top: 5px;
+  text-align: center;
+
+  .field {
+    float: left;
+    width: 24%;
+    input {
+      width: 60px;
+    }
+  }
+}
+
+.line {
+  border-bottom: 1px solid grey;
+  margin-bottom: 5px;
+}
+
+.transport_systems {
+  width: 50%;
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.total {
+  font-size: 40px;
+  width: 50%;
+  margin: 0 auto;
+  .error_msg {
+    color: red;
+    font-size: small;
+  }
+}
