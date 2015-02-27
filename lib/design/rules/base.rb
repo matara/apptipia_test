@@ -1,12 +1,13 @@
 module Design
   module Rules
     class Base
-      attr_accessor :progress, :product_names, :goal
+      attr_accessor :progress, :product_names, :goal, :final_price
 
-      def initialize(product_names = [], goal = default_goal)
+      def initialize(product_names = [])
         @progress = 0
         @product_names = product_names
-        @goal = goal
+        @goal = default_goal
+        @final_price = default_final_price
       end
 
       private
@@ -26,6 +27,13 @@ module Design
         self.progress = 0
       end
 
+      def default_goal
+        0
+      end
+
+      def default_final_price
+        0
+      end
     end
   end
 end

@@ -12,6 +12,10 @@ module Design
         @applied_rules << rule
         @final_price = rule.final_price
       end
+
+      def price
+        0
+      end
     end
   end
 end

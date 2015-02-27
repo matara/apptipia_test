@@ -16,7 +16,7 @@ module Design
         end
       end
 
-      def final_price
+      def default_final_price
         4.5
       end
 
