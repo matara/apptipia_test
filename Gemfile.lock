@@ -19,12 +19,12 @@ GEM
     compass-import-once (1.0.5)
       sass (>= 3.2, < 3.5)
     diff-lcs (1.2.5)
-    execjs (2.3.0)
+    execjs (2.9.1)
     ffi (1.9.6)
     haml (4.0.6)
       tilt
     hike (1.2.3)
-    json (1.8.2)
+    json (2.7.2)
     multi_json (1.10.1)
     rack (1.6.0)
     rack-cache (1.2)
@@ -63,7 +63,7 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     tilt (1.4.1)
-    uglifier (2.7.0)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
 
